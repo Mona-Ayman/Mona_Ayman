@@ -22,6 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             </thead>  
             <tbody>     
                 <?php 
+                print_r($_SESSION);die;
                 for($i = 0 ; $i < $_SESSION['members'] ; $i++){?>
                     <tr>
                         <td>

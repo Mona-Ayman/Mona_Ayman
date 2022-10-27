@@ -7,17 +7,17 @@ if($_POST){
     $grades = $_POST['physics'] + $_POST['chemistry'] + $_POST['biology'] + $_POST['mathematics'] + $_POST['computer'];
     $result = ($grades/$Max_Grade)*100;
     if($result >= 90 && $result <= 100){
-        $message = "<div class='alert alert-success'> Percentage : {$result} , Grade : A  </div>";
+        $message = "<div class='alert alert-success'> Percentage : {$result} % , Grade : A  </div>";
     }elseif($result >= 80 && $result < 90){
-        $message = "<div class='alert alert-success'> Percentage : {$result} , Grade : B  </div>";
+        $message = "<div class='alert alert-success'> Percentage : {$result} % , Grade : B  </div>";
     }elseif($result >= 70 && $result < 80){
-        $message = "<div class='alert alert-success'> Percentage : {$result} , Grade : C  </div>";
+        $message = "<div class='alert alert-success'> Percentage : {$result} % , Grade : C  </div>";
     }elseif($result >= 60 && $result < 70){
-        $message = "<div class='alert alert-warning'> Percentage : {$result} , Grade : D  </div>";
+        $message = "<div class='alert alert-warning'> Percentage : {$result} % , Grade : D  </div>";
     }elseif($result >= 40 && $result < 60){
-        $message = "<div class='alert alert-warning'> Percentage : {$result} , Grade : E  </div>";
+        $message = "<div class='alert alert-warning'> Percentage : {$result} % , Grade : E  </div>";
     }elseif($result >= 0 && $result < 40){
-        $message = "<div class='alert alert-danger'> Percentage : {$result} , Grade : F  </div>";
+        $message = "<div class='alert alert-danger'> Percentage : {$result} % , Grade : F  </div>";
     }else{
         $message = "<div class='alert alert-primary'>Invalid Grade</div>";
         $message = "Invalid Grade";

@@ -1,3 +1,9 @@
+<?php
+function old(string $input) :?string{
+    return $_POST[$input] ?? null;
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -25,10 +31,10 @@
                     <h3>City</h3>
                 </label>
                 <select class="form-select form-select-lg mb-3 col-12" name="city" aria-label=".form-select-lg example">
-                    <option <?= $_POST['city'] == 'cairo' ? 'selected' : '' ?> value="cairo">Cairo</option>
-                    <option <?= $_POST['city'] == 'giza' ? 'selected' : '' ?> value="giza">Giza</option>
-                    <option <?= $_POST['city'] == 'alex' ? 'selected' : '' ?> value="alex">Alex</option>
-                    <option <?= $_POST['city'] == 'other' ? 'selected' : '' ?> value="other">Other</option>
+                    <option <?= old('city') == 'cairo' ? 'selected' : '' ?> value="cairo">Cairo</option>
+                    <option <?= old('city') == 'giza' ? 'selected' : '' ?> value="giza">Giza</option>
+                    <option <?= old('city') == 'alex' ? 'selected' : '' ?> value="alex">Alex</option>
+                    <option <?= old('city') == 'other' ? 'selected' : '' ?> value="other">Other</option>
                 </select>
             </div>
             <div class="mb-5 col-9 mx-auto">
